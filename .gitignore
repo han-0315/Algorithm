@@ -1,0 +1,15 @@
+# 특정 파일 또는 디렉토리 제외하기
+# file.txt
+# directory/
+
+# 특정 확장자 제외하기
+*.log
+*.csv
+*.json
+
+# 특정 패턴 제외하기
+# node_modules/
+# *.exe
+
+# 비어 있는 디렉토리 제외하기
+!.gitkeep
