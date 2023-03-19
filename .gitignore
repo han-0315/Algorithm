@@ -3,8 +3,8 @@
 # directory/
 
 # 특정 확장자 제외하기
-*.log
-*.csv
+*.exe
+*.txt
 *.json
 
 # 특정 패턴 제외하기
