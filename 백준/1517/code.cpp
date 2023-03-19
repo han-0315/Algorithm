@@ -25,7 +25,7 @@ int main() {
     cin.tie(NULL); 
     cout.tie(NULL);
     //디버깅용
-    //freopen("input.txt", "r", stdin);
+    freopen("input.txt", "r", stdin);
     cin >> n;
     vec.resize(n);
     for(int i = 0; i<n;i++){
