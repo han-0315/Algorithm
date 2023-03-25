@@ -1,8 +1,17 @@
 # 특정 파일 또는 디렉토리 제외하기
 # file.txt
 # directory/
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
 
 # 특정 확장자 제외하기
+*.dSYM
 *.exe
 *.json
 
