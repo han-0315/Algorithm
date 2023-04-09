@@ -5,7 +5,7 @@
 ### 업데이트 목록
 
 2023. 04. 09. 
-* [lambda](lambda.md)
+* [lambda](lambda.md) ** 문서보완, 업데이트 예정
 * [iteration](iteration.md)
 
 2023. 04. 12.
