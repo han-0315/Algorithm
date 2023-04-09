@@ -1,7 +1,4 @@
 # 특정 파일 또는 디렉토리 제외하기
-# file.txt
-# directory/
-# Ignore all
 *
 
 # Unignore all with extensions
@@ -14,6 +11,7 @@
 *.dSYM
 *.exe
 *.json
+*.DS_Store
 
 # 특정 패턴 제외하기
 # node_modules/

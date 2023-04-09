@@ -38,7 +38,7 @@ cout << "total elements : " << total_elements << endl;
 `output: `64``
 ```
 
-
+for_each에 대한 자세한 내용은 [for_each](iteration.md#stdfor-each) 를 참고하면 된다.
 
 ``` cpp
 template <typename T>
@@ -71,7 +71,7 @@ cout << "2i:" << two_i() << " i:" << i << endl;
 ```
 #### 캡처의 범위
 캡처가 되는 개체들은 모두 람다가 정의된 위치에서 접근이 가능해야 한다.
-```
+```cpp
 int i = 8;
 auto f = []() {
   int j = 2;
@@ -111,9 +111,19 @@ f1 = [&](int i) -> int {
 };
 f1(10);
 ```
-와 같은 재미난 코드도 작성이 가능하다.
-
-
+와 같은 재미난 코드도 작성이 가능하다. 다른 방법을 사용한다면, 컴파일러가 type 추정을 해야해서 함수의 종료를 필요로 하여 논리적인 오류에 빠진다. 가령 위의 예시에서는 
+f2는 f1을 호출하고 있기 때문에, f2는 f1이 끝날 때 까지 끝나지 않는다. 그러나 f1은 f2를 호출하고 있기 때문에, f1도 f2가 끝날 때 까지 끝나지 않는다. 이런 경우에는 컴파일러가 type 추정을 할 수 없기 때문에 오류가 발생한다. 하지만 `std::function` 은 그럴 필요가 없다.
+``` cpp
+std::function<int(int)> fact;
+fact = [&fact](int n) -> int {
+  if (n == 0) {
+    return 1;
+  } else {
+    return (n * fact(n - 1));
+  }
+};
+cout << "factorial(4) : " << fact(4) << endl;
+```
 #### 참고자료
 [cppreference](https://en.cppreference.com/w/cpp/language/lambda)
 [모두의 코드](https://modoocode.com/196)
