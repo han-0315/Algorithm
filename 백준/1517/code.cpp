@@ -3,6 +3,8 @@
 #define ll long long 
 #define pii pair<int, int>
 using namespace std;
+
+
 int seg[SIZE * 2];
 vector<pii> vec;
 int n;
