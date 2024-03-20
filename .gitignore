@@ -1,6 +1,6 @@
 # 특정 파일 또는 디렉토리 제외하기
 *.vscode
-test
+
 # Unignore all with extensions
 !*.*
 
@@ -8,6 +8,8 @@ test
 !*/
 
 # 특정 확장자 제외하기
+*test
+*.out
 *.dSYM
 *.exe
 *.json
